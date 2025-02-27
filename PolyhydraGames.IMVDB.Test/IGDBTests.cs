@@ -1,10 +1,8 @@
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using PolyhydraGames.Core.Interfaces;
 using PolyhydraGames.Core.Models;
 using PolyhydraGames.IMVDB.API;
-using PolyhydraGames.IMVDB.Test.Fakes;
 
 namespace PolyhydraGames.IMVDB.Test;
 
