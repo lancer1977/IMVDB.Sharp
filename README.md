@@ -1,10 +1,10 @@
-[![NuGet Badge](https://img.shields.io/nuget/v/DiscogsClient.svg)](https://www.nuget.org/packages/PolyhydraGames.IMVDB/)
 
 # IMVDB.Sharp
 
 IMVDB.Sharp is a **C# wrapper** for the [IMVDB API](https://imvdb.com/api), providing an easy-to-use interface for accessing music video data. It simplifies making authenticated requests, fetching video details, searching for videos and entities, and handling API responses.
 
-[![NuGet Badge](https://img.shields.io/nuget/v/PolyhydraGames.IMVDB.svg)](https://www.nuget.org/packages/PolyhydraGames.IMVDB/)
+[![NuGet Badge](https://img.shields.io/nuget/v/DiscogsClient.svg)](https://www.nuget.org/packages/PolyhydraGames.IMVDB/)
+
 
 ## Features
 - 🎥 **Fetch Video Data**: Retrieve detailed information about music videos, including credits and behind-the-scenes content.
