@@ -14,4 +14,3 @@ public record Image(
     [property: JsonPropertyName("s")] string Small
 );
 
- 

@@ -1,11 +1,11 @@
-﻿using System.Diagnostics;
-using System.Net;
-using System.Runtime.CompilerServices;
-using System.Text.Json;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using PolyhydraGames.Core.Interfaces;
 using PolyhydraGames.IMVDB.DTO;
 using PolyhydraGames.IMVDB.Responses;
+using System.Diagnostics;
+using System.Net;
+using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 namespace PolyhydraGames.IMVDB.API;
 
@@ -19,7 +19,7 @@ public class IMVDBService
     {
         _logger = logger;
         _authService = authService;
-        _httpService = httpService; 
+        _httpService = httpService;
     }
 
     protected async Task<HttpRequestMessage> GetHttpRequestMessage(
@@ -32,8 +32,8 @@ public class IMVDBService
             RequestUri = Uri(method),
             Method = httpMethod,
             Content = content
-        }; 
-        request.Headers.Add("IMVDB-APP-KEY",this._authService.APIKey);
+        };
+        request.Headers.Add("IMVDB-APP-KEY", this._authService.APIKey);
         return request;
     }
 
@@ -46,7 +46,7 @@ public class IMVDBService
     protected async Task<HttpResponseType<T>> Get<T>([CallerMemberName] string endUrl = "")
     {
         HttpClient client = this._httpService.GetClient;
-        
+
         HttpResponseMessage httpResponseMessage = await client.SendAsync(await this.GetHttpRequestMessage(endUrl, HttpMethod.Get));
         if (httpResponseMessage.IsSuccessStatusCode)
         {

@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using PolyhydraGames.IMVDB.DTO;
+﻿using PolyhydraGames.IMVDB.DTO;
+using System.Text.Json.Serialization;
 
 namespace PolyhydraGames.IMVDB.Responses;
 

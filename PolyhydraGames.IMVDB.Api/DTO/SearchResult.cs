@@ -2,7 +2,7 @@
 
 namespace PolyhydraGames.IMVDB.DTO;
 
- 
+
 
 public record SearchResult<T>(
     [property: JsonPropertyName("total")] int Total,
