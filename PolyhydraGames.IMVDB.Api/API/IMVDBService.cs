@@ -11,6 +11,15 @@ namespace PolyhydraGames.IMVDB.API;
 
 public class IMVDBService
 {
+    public static JsonSerializerOptions DefaultOptions = new JsonSerializerOptions
+    {
+        Converters = { new NullableIntEmptyStringConverter(), new ImageConverter(), new IntStringConverter() }
+    };
+
+    public static T? Deserialize<T>(string json)
+    {
+        return JsonSerializer.Deserialize<T>(json, DefaultOptions);
+    }
     protected readonly IHttpService _httpService;
     private readonly ILogger<IMVDBService> _logger;
     private readonly IIMVDBAuthorization _authService;
@@ -20,7 +29,11 @@ public class IMVDBService
         _logger = logger;
         _authService = authService;
         _httpService = httpService;
+        Options = DefaultOptions;
+         
     }
+
+    public JsonSerializerOptions Options { get; set; }
 
     protected async Task<HttpRequestMessage> GetHttpRequestMessage(
         string method,
@@ -55,7 +68,7 @@ public class IMVDBService
             {
                 var rawText = await response.Content.ReadAsStringAsync();
                 Debug.WriteLine(rawText);
-                T obj = JsonSerializer.Deserialize<T>(rawText);
+                T? obj = Deserialize<T?>(rawText);
                 return HttpResponse.Create("", obj);
             }
 

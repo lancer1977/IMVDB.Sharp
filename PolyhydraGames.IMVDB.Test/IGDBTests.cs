@@ -3,8 +3,11 @@ using Moq;
 using PolyhydraGames.Core.Interfaces;
 using PolyhydraGames.Core.Models;
 using PolyhydraGames.IMVDB.API;
+using System;
+using NUnit.Framework;
+using PolyhydraGames.IMVDB.Test;
 
-namespace PolyhydraGames.IMVDB.Test;
+namespace PolyhydraGames.IMVDB.Tests;
 
 [TestFixture]
 public class ImvdbTests : TestBase
@@ -22,11 +25,11 @@ public class ImvdbTests : TestBase
         //var logClientConfig = new Moq.Mock<ILogger<ITwitchClientConfig>>().Object;
         //var logClient = new Moq.Mock<ILogger<IgdbClient>>().Object; 
         var httpMock = new Mock<IHttpService>();
-        httpMock.Setup(x => x.GetClient).Returns(new HttpClient());  
+        httpMock.Setup(x => x.GetClient).Returns(new HttpClient());
 
         var config = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            
+
             .AddUserSecrets("65a2f916-1765-44e8-8d59-2d2ddcd7cc9b") // Use the UserSecretsId generated earlier
             .Build();
 

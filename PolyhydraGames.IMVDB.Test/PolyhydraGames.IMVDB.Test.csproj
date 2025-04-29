@@ -34,12 +34,15 @@
     <ProjectReference Include="..\PolyhydraGames.IMVDB.Api\PolyhydraGames.IMVDB.csproj" />
   </ItemGroup>
 
- 
 
 
- 
-  <ItemGroup>
-    <None Update="appsettings.json">
+	<ItemGroup>
+		<EmbeddedResource Include="TestData\*.json" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

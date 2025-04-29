@@ -1,0 +1,702 @@
+﻿{
+    "total_results": 200,
+    "current_page": 1,
+    "per_page": 25,
+    "total_pages": 8,
+    "results": [
+        {
+            "id": 235111146936,
+            "production_status": "r",
+            "song_title": "Dolphin",
+            "song_slug": "dolphin",
+            "url": "https:\/\/imvdb.com\/video\/prince\/dolphin",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1995,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/235111146936-prince-dolphin_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/235111146936-prince-dolphin_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/235111146936-prince-dolphin_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/235111146936-prince-dolphin_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/235111146936-prince-dolphin_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 655024668075,
+            "production_status": "r",
+            "song_title": "America",
+            "song_slug": "america",
+            "url": "https:\/\/imvdb.com\/video\/prince\/america",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1985,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/655024668075-prince-america_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/655024668075-prince-america_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/655024668075-prince-america_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/655024668075-prince-america_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/655024668075-prince-america_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 709832406821,
+            "production_status": "r",
+            "song_title": "My Name Is Prince",
+            "song_slug": "my-name-is-prince",
+            "url": "https:\/\/imvdb.com\/video\/prince\/my-name-is-prince",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1992,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/709832406821-prince-my-name-is-prince_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/709832406821-prince-my-name-is-prince_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/709832406821-prince-my-name-is-prince_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/709832406821-prince-my-name-is-prince_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/709832406821-prince-my-name-is-prince_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 346382762989,
+            "production_status": "r",
+            "song_title": "Uptown",
+            "song_slug": "uptown",
+            "url": "https:\/\/imvdb.com\/video\/prince\/uptown",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1980,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/346382762989-prince-uptown_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/346382762989-prince-uptown_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/346382762989-prince-uptown_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/346382762989-prince-uptown_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/346382762989-prince-uptown_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 177046992130,
+            "production_status": "r",
+            "song_title": "Girls & Boys",
+            "song_slug": "girls-boys",
+            "url": "https:\/\/imvdb.com\/video\/prince\/girls-boys",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1986,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/177046992130-prince-girls-boys_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/177046992130-prince-girls-boys_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/177046992130-prince-girls-boys_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/177046992130-prince-girls-boys_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/177046992130-prince-girls-boys_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 257653023122,
+            "production_status": "r",
+            "song_title": "Marz",
+            "song_slug": "marz",
+            "url": "https:\/\/imvdb.com\/video\/prince\/marz",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 2015,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/257653023122-prince-marz_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/257653023122-prince-marz_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/257653023122-prince-marz_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/257653023122-prince-marz_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/257653023122-prince-marz_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 172363128442,
+            "production_status": "r",
+            "song_title": "Paisley Park",
+            "song_slug": "paisley-park",
+            "url": "https:\/\/imvdb.com\/video\/prince\/paisley-park",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1985,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/172363128442-prince-paisley-park_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/172363128442-prince-paisley-park_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/172363128442-prince-paisley-park_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/172363128442-prince-paisley-park_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/172363128442-prince-paisley-park_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 270828245272,
+            "production_status": "r",
+            "song_title": "Mountains",
+            "song_slug": "mountains",
+            "url": "https:\/\/imvdb.com\/video\/prince\/mountains",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1986,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/270828245272-prince-mountains_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/270828245272-prince-mountains_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/270828245272-prince-mountains_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/270828245272-prince-mountains_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/270828245272-prince-mountains_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 627080299376,
+            "production_status": "r",
+            "song_title": "Guitar",
+            "song_slug": "guitar",
+            "url": "https:\/\/imvdb.com\/video\/prince\/guitar",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 2008,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/627080299376-prince-guitar_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/627080299376-prince-guitar_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/627080299376-prince-guitar_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/627080299376-prince-guitar_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/627080299376-prince-guitar_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 286879471890,
+            "production_status": "r",
+            "song_title": "Alphabet St.",
+            "song_slug": "alphabet-st",
+            "url": "https:\/\/imvdb.com\/video\/prince\/alphabet-st",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1988,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286879471890-prince-alphabet-st_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286879471890-prince-alphabet-st_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286879471890-prince-alphabet-st_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286879471890-prince-alphabet-st_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286879471890-prince-alphabet-st_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 135144919551,
+            "production_status": "r",
+            "song_title": "Somebody's Somebody",
+            "song_slug": "somebodys-somebody",
+            "url": "https:\/\/imvdb.com\/video\/prince\/somebodys-somebody",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1997,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/135144919551-prince-somebodys-somebody_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/135144919551-prince-somebodys-somebody_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/135144919551-prince-somebodys-somebody_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/135144919551-prince-somebodys-somebody_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/135144919551-prince-somebodys-somebody_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 155559197510,
+            "production_status": "r",
+            "song_title": "Raspberry Beret",
+            "song_slug": "raspberry-beret",
+            "url": "https:\/\/imvdb.com\/video\/prince\/raspberry-beret",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1985,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/155559197510-prince-raspberry-beret_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/155559197510-prince-raspberry-beret_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/155559197510-prince-raspberry-beret_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/155559197510-prince-raspberry-beret_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/155559197510-prince-raspberry-beret_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 241968144671,
+            "production_status": "r",
+            "song_title": "Screwdriver",
+            "song_slug": "screwdriver",
+            "url": "https:\/\/imvdb.com\/video\/prince\/screwdriver",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 2013,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/241968144671-prince-screwdriver_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/241968144671-prince-screwdriver_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/241968144671-prince-screwdriver_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/241968144671-prince-screwdriver_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/241968144671-prince-screwdriver_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 194311690964,
+            "production_status": "r",
+            "song_title": "Gold",
+            "song_slug": "gold",
+            "url": "https:\/\/imvdb.com\/video\/prince\/gold",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1995,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/194311690964-prince-gold_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/194311690964-prince-gold_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/194311690964-prince-gold_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/194311690964-prince-gold_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/194311690964-prince-gold_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 286659378553,
+            "production_status": "r",
+            "song_title": "Get Wild",
+            "song_slug": "get-wild",
+            "url": "https:\/\/imvdb.com\/video\/prince\/get-wild",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1995,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286659378553-prince-get-wild_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286659378553-prince-get-wild_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286659378553-prince-get-wild_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286659378553-prince-get-wild_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/286659378553-prince-get-wild_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 272428570854,
+            "production_status": "r",
+            "song_title": "Interactive",
+            "song_slug": "interactive",
+            "url": "https:\/\/imvdb.com\/video\/prince\/interactive",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1994,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/272428570854-prince-interactive_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/272428570854-prince-interactive_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/272428570854-prince-interactive_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/272428570854-prince-interactive_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/272428570854-prince-interactive_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 169593755854,
+            "production_status": "r",
+            "song_title": "Beautiful Strange",
+            "song_slug": "beautiful-strange",
+            "url": "https:\/\/imvdb.com\/video\/prince\/beautiful-strange",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1998,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/169593755854-prince-beautiful-strange_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/169593755854-prince-beautiful-strange_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/169593755854-prince-beautiful-strange_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/169593755854-prince-beautiful-strange_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/169593755854-prince-beautiful-strange_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 292632143642,
+            "production_status": "r",
+            "song_title": "Endorphinmachine",
+            "song_slug": "endorphinmachine",
+            "url": "https:\/\/imvdb.com\/video\/prince\/endorphinmachine",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1994,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/292632143642-prince-endorphinmachine_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/292632143642-prince-endorphinmachine_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/292632143642-prince-endorphinmachine_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/292632143642-prince-endorphinmachine_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/292632143642-prince-endorphinmachine_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 151602970250,
+            "production_status": "r",
+            "song_title": "Cream",
+            "song_slug": "cream",
+            "url": "https:\/\/imvdb.com\/video\/prince\/cream",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1991,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/151602970250-prince-cream_music_video_ov.jpg?v=3",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/151602970250-prince-cream_music_video_lv.jpg?v=3",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/151602970250-prince-cream_music_video_bv.jpg?v=3",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/151602970250-prince-cream_music_video_tv.jpg?v=3",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/151602970250-prince-cream_music_video_sv.jpg?v=3"
+            }
+        },
+        {
+            "id": 210850890605,
+            "production_status": "r",
+            "song_title": "Pink Costume",
+            "song_slug": "pink-costume",
+            "url": "https:\/\/imvdb.com\/video\/prince\/pink-costume",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1993,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": []
+        },
+        {
+            "id": 133000375897,
+            "production_status": "r",
+            "song_title": "Peach",
+            "song_slug": "peach",
+            "url": "https:\/\/imvdb.com\/video\/prince\/peach",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1993,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/133000375897-prince-peach_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/133000375897-prince-peach_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/133000375897-prince-peach_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/133000375897-prince-peach_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/133000375897-prince-peach_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 397483156287,
+            "production_status": "r",
+            "song_title": 999,
+            "song_slug": 999,
+            "url": "https:\/\/imvdb.com\/video\/prince-innocence\/999",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 2018,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince Innocence",
+                    "slug": "prince-innocence",
+                    "url": "https:\/\/imvdb.com\/n\/prince-innocence"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/397483156287-prince-innocence-999_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/397483156287-prince-innocence-999_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/397483156287-prince-innocence-999_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/397483156287-prince-innocence-999_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/397483156287-prince-innocence-999_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 125832413879,
+            "production_status": "r",
+            "song_title": "Pop Life",
+            "song_slug": "pop-life",
+            "url": "https:\/\/imvdb.com\/video\/prince\/pop-life",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 1984,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/125832413879-prince-pop-life_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/125832413879-prince-pop-life_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/125832413879-prince-pop-life_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/125832413879-prince-pop-life_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/125832413879-prince-pop-life_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 238968401071,
+            "production_status": "r",
+            "song_title": "Chocolate Box",
+            "song_slug": "chocolate-box",
+            "url": "https:\/\/imvdb.com\/video\/prince\/chocolate-box",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 2009,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/238968401071-prince-chocolate-box_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/238968401071-prince-chocolate-box_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/238968401071-prince-chocolate-box_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/238968401071-prince-chocolate-box_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/238968401071-prince-chocolate-box_music_video_sv.jpg?v=2"
+            }
+        },
+        {
+            "id": 281149043588,
+            "production_status": "r",
+            "song_title": "Chelsea Rodgers",
+            "song_slug": "chelsea-rodgers",
+            "url": "https:\/\/imvdb.com\/video\/prince\/chelsea-rodgers",
+            "multiple_versions": false,
+            "version_name": null,
+            "version_number": 1,
+            "is_imvdb_pick": false,
+            "aspect_ratio": null,
+            "year": 2007,
+            "verified_credits": false,
+            "artists": [
+                {
+                    "name": "Prince",
+                    "slug": "prince",
+                    "url": "https:\/\/imvdb.com\/n\/prince"
+                }
+            ],
+            "image": {
+                "o": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/281149043588-prince-chelsea-rodgers_music_video_ov.jpg?v=2",
+                "l": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/281149043588-prince-chelsea-rodgers_music_video_lv.jpg?v=2",
+                "b": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/281149043588-prince-chelsea-rodgers_music_video_bv.jpg?v=2",
+                "t": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/281149043588-prince-chelsea-rodgers_music_video_tv.jpg?v=2",
+                "s": "https:\/\/s3.amazonaws.com\/images.imvdb.com\/video\/281149043588-prince-chelsea-rodgers_music_video_sv.jpg?v=2"
+            }
+        }
+    ]
+}
