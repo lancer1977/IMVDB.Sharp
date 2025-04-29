@@ -22,12 +22,11 @@ public class ImvdbTests : TestBase
         //var logClientConfig = new Moq.Mock<ILogger<ITwitchClientConfig>>().Object;
         //var logClient = new Moq.Mock<ILogger<IgdbClient>>().Object; 
         var httpMock = new Mock<IHttpService>();
-        httpMock.Setup(x => x.GetClient).Returns(new HttpClient());
-        IIMVDBAuthorization auth;
+        httpMock.Setup(x => x.GetClient).Returns(new HttpClient());  
 
         var config = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            //.AddUserSecrets("977cb758-5c0c-46e9-97c4-9a167a8d117a")
+            
             .AddUserSecrets("65a2f916-1765-44e8-8d59-2d2ddcd7cc9b") // Use the UserSecretsId generated earlier
             .Build();
 
@@ -37,8 +36,17 @@ public class ImvdbTests : TestBase
             services.AddSingleton<IConfiguration>(config);
             services.AddSingleton(_ => httpMock.Object);
             services.AddSingleton<IMVDBService>();
-            services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis.polyhydragames.com"));
-            services.AddSingleton<IIMVDBAuthorization, IMVDBAuthorization>();
+            services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("192.168.0.21"));
+            services.AddSingleton<IIMVDBAuthorization>(x =>
+            {
+                var config = x.GetRequiredService<IConfiguration>();
+                var apiKey = config["IMVDB:APIKey"];
+                if (string.IsNullOrEmpty(apiKey))
+                {
+                    throw new InvalidOperationException("IMVDB API Key is not configured.");
+                }
+                return new IMVDBAuthorization { APIKey = apiKey };
+            });
         });
 
         Service = host.Services.GetService<IMVDBService>();

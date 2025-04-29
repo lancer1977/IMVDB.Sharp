@@ -33,6 +33,7 @@ public class IMVDBService
             Method = httpMethod,
             Content = content
         };
+        Debug.WriteLine(request.RequestUri);
         request.Headers.Add("IMVDB-APP-KEY", this._authService.APIKey);
         return request;
     }
@@ -46,22 +47,30 @@ public class IMVDBService
     protected async Task<HttpResponseType<T>> Get<T>([CallerMemberName] string endUrl = "")
     {
         HttpClient client = this._httpService.GetClient;
-
-        HttpResponseMessage httpResponseMessage = await client.SendAsync(await this.GetHttpRequestMessage(endUrl, HttpMethod.Get));
-        if (httpResponseMessage.IsSuccessStatusCode)
+        try
         {
-            var rawText = await httpResponseMessage.Content.ReadAsStringAsync();
-            Debug.WriteLine(rawText);
-            T obj = JsonSerializer.Deserialize<T>(rawText);
-            return HttpResponse.Create("", obj);
-        }
+            var request = await this.GetHttpRequestMessage(endUrl, HttpMethod.Get);
+            var response = await client.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                var rawText = await response.Content.ReadAsStringAsync();
+                Debug.WriteLine(rawText);
+                T obj = JsonSerializer.Deserialize<T>(rawText);
+                return HttpResponse.Create("", obj);
+            }
 
-        if (httpResponseMessage.StatusCode == HttpStatusCode.Unauthorized)
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                return HttpResponse.Create<T>("Not authorized", default(T));
+            }
+
+            return HttpResponse.Create<T>(response.StatusCode.ToString() + ":" + response.ReasonPhrase, default(T));
+        }
+        catch (Exception ex)
         {
-            return HttpResponse.Create<T>("Not authorized", default(T));
+            _logger.LogCritical(ex, "Error in Get");
+            return HttpResponse.Create<T>(ex.Message, default(T));
         }
-        return HttpResponse.Create<T>(httpResponseMessage.StatusCode.ToString() + ":" + httpResponseMessage.ReasonPhrase, default(T));
-
     }
     public Task<HttpResponseType<VideoResponse>> GetVideoResponse(string id)
     {

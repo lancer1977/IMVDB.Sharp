@@ -2,6 +2,6 @@
 
 public interface IIMVDBAuthorization
 {
-    string APIKey { get; }
+    string APIKey { get; set; }
     string GetIncludes();
 }
