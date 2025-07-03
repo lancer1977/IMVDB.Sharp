@@ -21,12 +21,12 @@ public class IMVDBService
         return JsonSerializer.Deserialize<T>(json, DefaultOptions);
     }
     protected readonly IHttpService _httpService;
-    private readonly ILogger<IMVDBService> _logger;
+    private readonly ILogger<IMVDBService> Logger;
     private readonly IIMVDBAuthorization _authService;
     public static string BaseUrl => "https://imvdb.com/api/v1/";
     public IMVDBService(ILogger<IMVDBService> logger, IIMVDBAuthorization authService, IHttpService httpService)
     {
-        _logger = logger;
+        Logger = logger;
         _authService = authService;
         _httpService = httpService;
         Options = DefaultOptions;
@@ -81,7 +81,7 @@ public class IMVDBService
         }
         catch (Exception ex)
         {
-            _logger.LogCritical(ex, "Error in Get");
+            Logger.LogCritical(ex, "Error in Get");
             return HttpResponse.Create<T>(ex.Message, default(T));
         }
     }
