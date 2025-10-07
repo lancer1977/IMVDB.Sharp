@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PolyhydraGames.Core.RestfulService" Version="1.0.0.46" />
+    <PackageReference Include="PolyhydraGames.Core.RestfulService" Version="1.0.0.47" />
   </ItemGroup>
 
 </Project>
