@@ -11,7 +11,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageReference Include="PolyhydraGames.Core.Models" Version="1.0.1.13" />
 
     <PackageReference Include="StackExchange.Redis" Version="2.10.1" />
@@ -23,7 +23,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference> 
-    <PackageReference Include="PolyhydraGames.Core.Test" Version="1.0.0.22" />
+    <PackageReference Include="PolyhydraGames.Core.Test" Version="1.0.1.1" />
   </ItemGroup>
 
  
