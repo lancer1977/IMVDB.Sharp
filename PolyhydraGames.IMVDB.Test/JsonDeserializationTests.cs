@@ -1,16 +1,15 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using PolyhydraGames.Extensions;
 using PolyhydraGames.IMVDB.API;
 using PolyhydraGames.IMVDB.DTO;
-using JsonSerializerOptions = System.Text.Json.JsonSerializerOptions;
 
-namespace PolyhydraGames.IMVDB.Test;
+namespace PolyhydraGames.IMVDB.Test
+{
     [TestFixture]
     public class JsonDeserializationTests
     {
-        private static readonly Assembly _assembly = Assembly.GetExecutingAssembly(); 
+        private static readonly Assembly _assembly = Assembly.GetExecutingAssembly();
 
 
         [Test]
@@ -33,9 +32,9 @@ namespace PolyhydraGames.IMVDB.Test;
                 try
                 {
                     // Replace ImageRoot with your actual root class
-                 var result =    IMVDBService.Deserialize<SearchResult<Video>>(json);
-                 Debug.WriteLine(result.Results.Count);
-                 Assert.That(result.Results.Any());
+                    var result = IMVDBService.Deserialize<SearchResult<Video>>(json);
+                    Debug.WriteLine(result.Results.Count);
+                    Assert.That(result.Results.Any());
                 }
                 catch (Exception ex)
                 {
@@ -44,3 +43,4 @@ namespace PolyhydraGames.IMVDB.Test;
             }
         }
     }
+}

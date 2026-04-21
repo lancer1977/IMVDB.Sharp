@@ -50,8 +50,9 @@ namespace PolyhydraGames.IMVDB
             JsonSerializer.Serialize(writer, value, options);
         }
 
-        private Image EmptyImage() => new Image("", "", "", "", "");
+        private Image EmptyImage()
+        {
+            return new Image("", "", "", "", "");
+        }
     }
-
-
 }

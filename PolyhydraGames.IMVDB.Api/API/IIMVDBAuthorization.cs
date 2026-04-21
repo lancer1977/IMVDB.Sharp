@@ -1,7 +1,8 @@
-﻿namespace PolyhydraGames.IMVDB.API;
-
-public interface IIMVDBAuthorization
+﻿namespace PolyhydraGames.IMVDB.API
 {
-    string APIKey { get; set; }
-    string GetIncludes();
+    public interface IIMVDBAuthorization
+    {
+        string APIKey { get; set; }
+        string GetIncludes();
+    }
 }

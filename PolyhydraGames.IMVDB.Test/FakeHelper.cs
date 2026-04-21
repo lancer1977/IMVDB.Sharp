@@ -1,4 +1,3 @@
-
 //namespace Spotabot.Test
 //{
 //    class FakeTwitchEventSource
@@ -76,3 +75,4 @@
 
 //    }
 //}
+

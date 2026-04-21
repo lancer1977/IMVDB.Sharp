@@ -1,10 +1,11 @@
-namespace PolyhydraGames.IMVDB.Test;
-
-public abstract class TestBase
+namespace PolyhydraGames.IMVDB.Test
 {
-    [SetUp]
-    public async Task Setup()
+    public abstract class TestBase
     {
-        //await SystemsDatabase.Instance.Initialize();
+        [SetUp]
+        public async Task Setup()
+        {
+            //await SystemsDatabase.Instance.Initialize();
+        }
     }
 }

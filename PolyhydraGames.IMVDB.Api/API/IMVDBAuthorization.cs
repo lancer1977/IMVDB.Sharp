@@ -1,10 +1,12 @@
-﻿namespace PolyhydraGames.IMVDB.API;
-
-public class IMVDBAuthorization : IIMVDBAuthorization
+﻿namespace PolyhydraGames.IMVDB.API
 {
-    public string APIKey { get; set; }
-    public string GetIncludes()
+    public class IMVDBAuthorization : IIMVDBAuthorization
     {
-        return "include=credits,bts,countries";
+        public string APIKey { get; set; }
+
+        public string GetIncludes()
+        {
+            return "include=credits,bts,countries";
+        }
     }
 }

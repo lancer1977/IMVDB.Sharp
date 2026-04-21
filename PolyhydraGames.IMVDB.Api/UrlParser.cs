@@ -5,7 +5,7 @@ namespace PolyhydraGames.IMVDB
     public static class UrlParser
     {
         public static string ParseEmbedUrl(string url)
-        { 
+        {
             Debug.WriteLine(url);
             var result = url
                     .Split('?')[0]
