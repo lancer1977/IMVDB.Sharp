@@ -8,6 +8,7 @@ using PolyhydraGames.IMVDB.Test;
 namespace PolyhydraGames.IMVDB.Tests
 {
     [TestFixture]
+    [Explicit("Requires IMVDB credentials, Redis, and live API access. Fixture-backed tests run by default.")]
     public class ImvdbTests : TestBase
     {
         [SetUp]

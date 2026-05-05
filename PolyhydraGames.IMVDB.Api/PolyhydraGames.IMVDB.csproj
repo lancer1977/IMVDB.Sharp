@@ -4,10 +4,24 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Title>PolyhydraGames.IMVDB</Title>
+        <Authors>Dread Breadcrumb</Authors>
+        <Description>A typed C# wrapper for the IMVDB API.</Description>
+        <PackageProjectUrl>https://github.com/lancer1977/IMVDB.Sharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/lancer1977/IMVDB.Sharp</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageId>PolyhydraGames.IMVDB</PackageId>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="PolyhydraGames.Core.RestfulService" Version="1.0.0.52"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="../README.md" Pack="true" PackagePath="/" />
+      <None Include="../LICENSE" Pack="true" PackagePath="/" />
     </ItemGroup>
 
 </Project>

@@ -1,13 +1,28 @@
 # API.IMVDB Roadmap (v1)
 
 ## Vision
-_What this API integration is trying to accomplish._
+
+Provide a small, typed C# wrapper for IMVDB music-video search, entity, and
+video endpoints.
 
 ## Current Status
-- [ ] **In Progress** / [ ] **Stable** / [ ] **Stubbed**
+
+- [x] In progress
+- [ ] Stable
+- [ ] Publication-ready
 
 ## Goals
-- 
+
+- [x] Keep default tests fixture-backed.
+- [x] Mark live API tests explicit.
+- [x] Pack README and LICENSE metadata.
+- [x] Add CI build/test/pack workflow.
+- [ ] Add typed error modeling.
+- [ ] Add fixture-backed URL construction tests.
+- [ ] Add sample application docs.
 
 ## Known Gaps
-- 
+
+- [ ] Live tests still require IMVDB credentials and Redis.
+- [ ] No typed IMVDB exception model yet.
+- [ ] Endpoint coverage audit is still needed.

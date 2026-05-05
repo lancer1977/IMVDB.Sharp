@@ -3,7 +3,7 @@
 
 IMVDB.Sharp is a **C# wrapper** for the [IMVDB API](https://imvdb.com/api), providing an easy-to-use interface for accessing music video data. It simplifies making authenticated requests, fetching video details, searching for videos and entities, and handling API responses.
 
-[![NuGet Badge](https://img.shields.io/nuget/v/DiscogsClient.svg)](https://www.nuget.org/packages/PolyhydraGames.IMVDB/)
+[![NuGet Badge](https://img.shields.io/nuget/v/PolyhydraGames.IMVDB.svg)](https://www.nuget.org/packages/PolyhydraGames.IMVDB/)
 
 
 ## Features
@@ -57,14 +57,34 @@ if (searchResults.Success)
 ```
 
 ## Roadmap
-- [ ] Expand API coverage to include all IMVDB endpoints
-- [ ] Improve error handling and logging
-- [ ] Add unit tests and documentation
-- [ ] Provide sample projects for easier adoption
+- [x] Add fixture-backed deserialization tests.
+- [x] Keep live IMVDB tests explicit.
+- [x] Add CI build/test/pack workflow.
+- [x] Pack README and LICENSE into NuGet package.
+- [ ] Expand API coverage to include all IMVDB endpoints.
+- [ ] Improve typed error handling and logging.
+- [ ] Provide sample projects for easier adoption.
+
+## Testing
+
+Default tests use embedded fixture JSON and should not require live IMVDB access.
+
+```bash
+dotnet test PolyhydraGames.IMVDB.Test.sln --no-restore
+```
+
+Live tests are marked explicit because they require IMVDB credentials, Redis,
+and live API access.
+
+## Build And Pack
+
+```bash
+dotnet build PolyhydraGames.IMVDB.Test.sln --no-restore
+dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore
+```
 
 ## Contributing
 Contributions are welcome! Feel free to submit issues or pull requests on GitHub.
 
 ## License
 This project is licensed under the MIT License.
-
