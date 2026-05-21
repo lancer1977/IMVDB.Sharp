@@ -83,6 +83,18 @@ dotnet build PolyhydraGames.IMVDB.Test.sln --no-restore
 dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore
 ```
 
+## Publishing
+
+Use the repo helper for the standard test/build/pack flow:
+
+```bash
+./pub.sh
+```
+
+- Packs `PolyhydraGames.IMVDB` into `./artifacts/package`
+- Set `PUBLISH_GITHUB_PACKAGES=true` to push packages with `PACKAGE_API_KEY` or `GITHUB_TOKEN`
+- Set `DRY_RUN=true` to skip the package push step
+
 ## Contributing
 Contributions are welcome! Feel free to submit issues or pull requests on GitHub.
 
