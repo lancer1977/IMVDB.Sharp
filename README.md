@@ -92,7 +92,8 @@ Use the repo helper for the standard test/build/pack flow:
 ```
 
 - Packs `PolyhydraGames.IMVDB` into `./artifacts/package`
-- Set `PUBLISH_GITHUB_PACKAGES=true` to push packages with `PACKAGE_API_KEY` or `GITHUB_TOKEN`
+- Set `PUBLISH_GITHUB_PACKAGES=true` to push packages with `PACKAGE_API_KEY`, `GHCR_TOKEN`, `GITHUB_PACKAGES_TOKEN`, `GITHUB_TOKEN`, or `GH_TOKEN`
+- Optional local secrets are loaded from `~/.config/secrets/ghcr.env` and `~/.config/secrets/polyhydra.env`
 - Set `DRY_RUN=true` to skip the package push step
 
 ## Contributing

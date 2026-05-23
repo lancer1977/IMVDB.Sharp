@@ -2,12 +2,17 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# shellcheck source=/dev/null
+source "$ROOT_DIR/scripts/lib/secrets.sh"
+load_local_secrets_from_dir "${HOME}/.config/secrets" \
+  ghcr.env \
+  polyhydra.env
 WORKSPACE_DIR="$ROOT_DIR"
 CONFIGURATION="${CONFIGURATION:-Release}"
 PACKAGE_DIR="${PACKAGE_DIR:-$ROOT_DIR/artifacts/package}"
 PUBLISH_GITHUB_PACKAGES="${PUBLISH_GITHUB_PACKAGES:-false}"
 PACKAGE_SOURCE="${PACKAGE_SOURCE:-https://nuget.pkg.github.com/${GITHUB_REPOSITORY_OWNER:-lancer1977}/index.json}"
-PACKAGE_API_KEY="${PACKAGE_API_KEY:-${GITHUB_TOKEN:-${GH_TOKEN:-}}}"
+PACKAGE_API_KEY="${PACKAGE_API_KEY:-${GHCR_TOKEN:-${GITHUB_PACKAGES_TOKEN:-${GITHUB_TOKEN:-${GH_TOKEN:-}}}}}"
 DRY_RUN="${DRY_RUN:-false}"
 
 show_help() {
@@ -20,7 +25,8 @@ Environment:
   PACKAGE_DIR                Output directory for .nupkg files.
   PUBLISH_GITHUB_PACKAGES    Set to true to push packages to GitHub Packages.
   PACKAGE_API_KEY            API key for package push.
-  GITHUB_TOKEN / GH_TOKEN     Fallback token for package push.
+  GHCR_TOKEN / GITHUB_PACKAGES_TOKEN / GITHUB_TOKEN / GH_TOKEN
+                             Fallback token for package push.
   DRY_RUN                    Set to true to skip push steps.
 EOF
 }
