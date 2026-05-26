@@ -98,7 +98,7 @@ namespace PolyhydraGames.IMVDB.API
         public async Task<HttpResponseType<SearchResult<Video>>> SearchVideos(string value, int per_page = 25,
             int page = 1)
         {
-            var endUrl = $"search/videos?q={value.Replace(" ", "+")}&per_page={per_page}&page={page} ";
+            var endUrl = BuildSearchEndpoint("videos", value, per_page, page);
             var result = await Get<SearchResult<Video>>(endUrl);
             return result;
         }
@@ -106,7 +106,7 @@ namespace PolyhydraGames.IMVDB.API
         public async Task<HttpResponseType<SearchResult<EntityResponse>>> SearchEntities(string value,
             int per_page = 25, int page = 1)
         {
-            var endUrl = $"search/entities?q={value.Replace(" ", "+")}&per_page={per_page}&page={page} ";
+            var endUrl = BuildSearchEndpoint("entities", value, per_page, page);
             var result = await Get<SearchResult<EntityResponse>>(endUrl);
             return result;
         }
@@ -116,6 +116,12 @@ namespace PolyhydraGames.IMVDB.API
             var endUrl = $"entity/{value}?include=credits,distinctpos";
             var result = await Get<EntityResponse>(endUrl);
             return result;
+        }
+
+        private static string BuildSearchEndpoint(string endpointType, string value, int perPage, int page)
+        {
+            var encoded = System.Uri.EscapeDataString(value).Replace("%20", "+");
+            return $"search/{endpointType}?q={encoded}&per_page={perPage}&page={page}".Trim();
         }
     }
 
