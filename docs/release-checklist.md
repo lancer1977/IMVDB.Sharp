@@ -11,8 +11,8 @@
 
 - [x] Default tests deserialize embedded fixture JSON.
 - [x] Live API tests are marked explicit.
-- [ ] Add fixture-backed URL construction tests.
-- [ ] Add typed error-response tests.
+- [x] Add fixture-backed URL construction tests.
+- [x] Add typed error-response tests.
 
 ## CI
 
@@ -23,6 +23,6 @@
 
 ## Future Work
 
-- [ ] Add typed IMVDB error modeling.
+- [x] Add typed IMVDB error modeling.
 - [ ] Add broader endpoint fixtures.
 - [ ] Add sample app documentation.

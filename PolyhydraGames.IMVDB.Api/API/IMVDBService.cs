@@ -77,15 +77,27 @@ namespace PolyhydraGames.IMVDB.API
 
                 if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    return HttpResponse.Create("Not authorized", default(T));
+                    return HttpResponse.CreateError<T>(
+                        IMVDBErrorKind.Unauthorized,
+                        response.StatusCode,
+                        "Not authorized",
+                        endUrl);
                 }
 
-                return HttpResponse.Create(response.StatusCode + ":" + response.ReasonPhrase, default(T));
+                return HttpResponse.CreateError<T>(
+                    IMVDBErrorKind.HttpError,
+                    response.StatusCode,
+                    response.StatusCode + ":" + response.ReasonPhrase,
+                    endUrl);
             }
             catch (Exception ex)
             {
                 Logger.LogCritical(ex, "Error in Get");
-                return HttpResponse.Create(ex.Message, default(T));
+                return HttpResponse.CreateError<T>(
+                    IMVDBErrorKind.Exception,
+                    null,
+                    ex.Message,
+                    endUrl);
             }
         }
 
@@ -125,13 +137,33 @@ namespace PolyhydraGames.IMVDB.API
         }
     }
 
-    public record HttpResponseType<T>(bool Success, string Message, T? Value);
+    public enum IMVDBErrorKind
+    {
+        None = 0,
+        Unauthorized = 1,
+        HttpError = 2,
+        Exception = 3
+    }
+
+    public record IMVDBError(IMVDBErrorKind Kind, HttpStatusCode? StatusCode, string Message, string? Endpoint = null);
+
+    public record HttpResponseType<T>(bool Success, string Message, T? Value, IMVDBError? Error);
 
     public static class HttpResponse
     {
         public static HttpResponseType<T> Create<T>(string message, T? value)
         {
-            return new HttpResponseType<T>(value != null, message, value);
+            return new HttpResponseType<T>(value != null, message, value, null);
+        }
+
+        public static HttpResponseType<T> CreateError<T>(
+            IMVDBErrorKind kind,
+            HttpStatusCode? statusCode,
+            string message,
+            string? endpoint = null)
+        {
+            var error = new IMVDBError(kind, statusCode, message, endpoint);
+            return new HttpResponseType<T>(false, message, default, error);
         }
     }
 }

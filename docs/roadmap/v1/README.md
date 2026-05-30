@@ -17,12 +17,11 @@ video endpoints.
 - [x] Mark live API tests explicit.
 - [x] Pack README and LICENSE metadata.
 - [x] Add CI build/test/pack workflow.
-- [ ] Add typed error modeling.
-- [ ] Add fixture-backed URL construction tests.
+- [x] Add typed error modeling.
+- [x] Add fixture-backed URL construction tests.
 - [ ] Add sample application docs.
 
 ## Known Gaps
 
 - [ ] Live tests still require IMVDB credentials and Redis.
-- [ ] No typed IMVDB exception model yet.
 - [ ] Endpoint coverage audit is still needed.
