@@ -1,4 +1,13 @@
 
+## Tags
+
+- dotnet
+- api
+- api-imvdb
+- testing
+- imvdb
+- video
+
 # IMVDB.Sharp
 
 IMVDB.Sharp is a **C# wrapper** for the [IMVDB API](https://imvdb.com/api), providing an easy-to-use interface for accessing music video data. It simplifies making authenticated requests, fetching video details, searching for videos and entities, and handling API responses.
