@@ -1,5 +1,7 @@
 # API.IMVDB Roadmap (v1)
 
+The remaining non-documentation follow-up is tracked in GitHub issue [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1). This roadmap stays as a docs mirror.
+
 ## Vision
 
 Provide a small, typed C# wrapper for IMVDB music-video search, entity, and
@@ -24,4 +26,4 @@ video endpoints.
 ## Known Gaps
 
 - [ ] Live tests still require IMVDB credentials and Redis.
-- [ ] Endpoint coverage audit is still needed.
+- [ ] Endpoint coverage audit is still needed. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).

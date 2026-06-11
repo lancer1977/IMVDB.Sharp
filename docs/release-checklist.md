@@ -1,5 +1,7 @@
 # Release Checklist
 
+The remaining non-documentation follow-up is tracked in GitHub issue [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1). Keep this checklist focused on release evidence and the remaining engineering work.
+
 ## Package Metadata
 
 - [x] Package ID is `PolyhydraGames.IMVDB`.
@@ -24,5 +26,5 @@
 ## Future Work
 
 - [x] Add typed IMVDB error modeling.
-- [ ] Add broader endpoint fixtures.
+- [ ] Add broader endpoint fixtures. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).
 - [ ] Add sample app documentation.
