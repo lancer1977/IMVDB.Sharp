@@ -1,6 +1,6 @@
 # API.IMVDB Roadmap (v1)
 
-The remaining non-documentation follow-up is tracked in GitHub issue [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1). This roadmap stays as a docs mirror.
+The remaining non-documentation follow-up that led to GitHub issue [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1) is complete. This roadmap stays as a docs mirror.
 
 ## Vision
 
@@ -25,5 +25,5 @@ video endpoints.
 
 ## Known Gaps
 
-- [ ] Live tests still require IMVDB credentials and Redis.
+- [x] Live tests remain gated by IMVDB credentials and Redis.
 - [x] Endpoint coverage audit is still needed. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).

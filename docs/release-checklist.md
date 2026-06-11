@@ -1,6 +1,6 @@
 # Release Checklist
 
-The remaining non-documentation follow-up is tracked in GitHub issue [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1). Keep this checklist focused on release evidence and the remaining engineering work.
+The remaining non-documentation follow-up that led to GitHub issue [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1) is complete. Keep this checklist focused on release evidence and the documented package contract.
 
 ## Package Metadata
 
