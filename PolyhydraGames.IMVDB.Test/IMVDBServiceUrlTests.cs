@@ -10,13 +10,14 @@ namespace PolyhydraGames.IMVDB.Test;
 [TestFixture]
 public class IMVDBServiceUrlTests
 {
-    private const string FixtureResourceName = "PolyhydraGames.IMVDB.Test.TestData.response.json";
-
     [TestCase("121779770452", "https://imvdb.com/api/v1/video/121779770452?include=credits,bts,countries")]
     [TestCase("1634", "https://imvdb.com/api/v1/entity/1634?include=credits,distinctpos")]
     public async Task Endpoint_methods_should_request_the_expected_fixture_backed_url(string id, string expectedUrl)
     {
-        var service = CreateService(HttpStatusCode.OK, FixtureResourceName, out var handler);
+        var resourceName = expectedUrl.Contains("/video/", StringComparison.Ordinal)
+            ? "PolyhydraGames.IMVDB.Test.TestData.video-detail.json"
+            : "PolyhydraGames.IMVDB.Test.TestData.entity-detail.json";
+        var service = CreateService(HttpStatusCode.OK, resourceName, out var handler);
 
         if (expectedUrl.Contains("/video/", StringComparison.Ordinal))
         {
@@ -33,7 +34,7 @@ public class IMVDBServiceUrlTests
     [Test]
     public async Task SearchVideos_should_encode_the_query_and_keep_fixture_backed_response_flow()
     {
-        var service = CreateService(HttpStatusCode.OK, FixtureResourceName, out var handler);
+        var service = CreateService(HttpStatusCode.OK, "PolyhydraGames.IMVDB.Test.TestData.video-search.json", out var handler);
 
         var result = await service.SearchVideos("Oingo Boingo");
 
@@ -47,7 +48,7 @@ public class IMVDBServiceUrlTests
     [Test]
     public async Task SearchEntities_should_request_the_expected_query_shape()
     {
-        var service = CreateService(HttpStatusCode.OK, FixtureResourceName, out var handler);
+        var service = CreateService(HttpStatusCode.OK, "PolyhydraGames.IMVDB.Test.TestData.entity-search.json", out var handler);
 
         await service.SearchEntities("Danny Elfman", per_page: 10, page: 2);
 

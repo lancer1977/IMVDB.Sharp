@@ -1,0 +1,54 @@
+{
+  "id": 121779770452,
+  "production_status": "r",
+  "song_title": "Little Red Corvette",
+  "song_slug": "little-red-corvette",
+  "url": "https://imvdb.com/video/prince/little-red-corvette",
+  "multiple_versions": false,
+  "version_name": null,
+  "version_number": 1,
+  "is_imvdb_pick": true,
+  "aspect_ratio": null,
+  "year": 1983,
+  "verified_credits": true,
+  "artists": [
+    {
+      "name": "Prince",
+      "slug": "prince",
+      "url": "https://imvdb.com/n/prince"
+    }
+  ],
+  "image": {
+    "o": "https://images.imvdb.com/video/121779770452-original.jpg",
+    "l": "https://images.imvdb.com/video/121779770452-large.jpg",
+    "b": "https://images.imvdb.com/video/121779770452-medium.jpg",
+    "t": "https://images.imvdb.com/video/121779770452-tiny.jpg",
+    "s": "https://images.imvdb.com/video/121779770452-small.jpg"
+  },
+  "directors": [
+    {
+      "position_name": "Director",
+      "position_code": "dir",
+      "entity_name": "Albert Magnoli",
+      "entity_slug": "albert-magnoli",
+      "entity_id": 1234,
+      "position_notes": null,
+      "position_id": 7,
+      "entity_url": "https://imvdb.com/n/albert-magnoli"
+    }
+  ],
+  "credits": {
+    "total_credits": 0,
+    "crew": [],
+    "cast": []
+  },
+  "release_date_stamp": 425318400,
+  "release_date_string": "1983-09-09",
+  "bts": [],
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States"
+    }
+  ]
+}

@@ -26,5 +26,5 @@ The remaining non-documentation follow-up is tracked in GitHub issue [`IMVDB.Sha
 ## Future Work
 
 - [x] Add typed IMVDB error modeling.
-- [ ] Add broader endpoint fixtures. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).
+- [x] Add broader endpoint fixtures. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).
 - [ ] Add sample app documentation.

@@ -26,4 +26,4 @@ video endpoints.
 ## Known Gaps
 
 - [ ] Live tests still require IMVDB credentials and Redis.
-- [ ] Endpoint coverage audit is still needed. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).
+- [x] Endpoint coverage audit is still needed. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).
