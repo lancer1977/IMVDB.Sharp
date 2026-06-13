@@ -1,0 +1,36 @@
+{
+  "total": 2,
+  "current_page": 1,
+  "per_page": 25,
+  "total_pages": 1,
+  "results": [
+    {
+      "id": 235111146936,
+      "production_status": "r",
+      "song_title": "Dolphin",
+      "song_slug": "dolphin",
+      "url": "https://imvdb.com/video/prince/dolphin",
+      "multiple_versions": false,
+      "version_name": null,
+      "version_number": 1,
+      "is_imvdb_pick": false,
+      "aspect_ratio": null,
+      "year": 1995,
+      "verified_credits": false,
+      "artists": [
+        {
+          "name": "Prince",
+          "slug": "prince",
+          "url": "https://imvdb.com/n/prince"
+        }
+      ],
+      "image": {
+        "o": "https://images.imvdb.com/video/235111146936-original.jpg",
+        "l": "https://images.imvdb.com/video/235111146936-large.jpg",
+        "b": "https://images.imvdb.com/video/235111146936-medium.jpg",
+        "t": "https://images.imvdb.com/video/235111146936-tiny.jpg",
+        "s": "https://images.imvdb.com/video/235111146936-small.jpg"
+      }
+    }
+  ]
+}
