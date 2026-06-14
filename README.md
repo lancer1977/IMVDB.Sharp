@@ -101,9 +101,20 @@ Use the repo helper for the standard test/build/pack flow:
 ```
 
 - Packs `PolyhydraGames.IMVDB` into `./artifacts/package`
-- Set `PUBLISH_GITHUB_PACKAGES=true` to push packages with `PACKAGE_API_KEY`, `GHCR_TOKEN`, `GITHUB_PACKAGES_TOKEN`, `GITHUB_TOKEN`, or `GH_TOKEN`
-- Optional local secrets are loaded from `~/.config/secrets/ghcr.env` and `~/.config/secrets/polyhydra.env`
+- Publishes to GitHub Packages by default, using `PACKAGE_API_KEY`, `GHCR_TOKEN`, `GITHUB_PACKAGES_TOKEN`, `GITHUB_TOKEN`, or `GH_TOKEN`
+- Set `PUBLISH_NUGET_ORG=true` only when the package should also go to nuget.org
 - Set `DRY_RUN=true` to skip the package push step
+
+For private/internal consumption from GitHub Packages, add the GitHub NuGet
+source for this organization and authenticate with a GitHub token or PAT:
+
+```bash
+dotnet nuget add source https://nuget.pkg.github.com/lancer1977/index.json \
+  --name lancer1977 \
+  --username YOUR_GITHUB_USERNAME \
+  --password YOUR_GITHUB_TOKEN \
+  --store-password-in-clear-text
+```
 
 ## Contributing
 Contributions are welcome! Feel free to submit issues or pull requests on GitHub.

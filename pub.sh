@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
-# shellcheck source=/dev/null
-source "$ROOT_DIR/scripts/lib/secrets.sh"
-load_local_secrets_from_dir "${HOME}/.config/secrets" \
-  ghcr.env \
-  polyhydra.env
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKSPACE_DIR="$ROOT_DIR"
 CONFIGURATION="${CONFIGURATION:-Release}"
 PACKAGE_DIR="${PACKAGE_DIR:-$ROOT_DIR/artifacts/package}"
-PUBLISH_GITHUB_PACKAGES="${PUBLISH_GITHUB_PACKAGES:-false}"
+PUBLISH_GITHUB_PACKAGES="${PUBLISH_GITHUB_PACKAGES:-true}"
 PACKAGE_SOURCE="${PACKAGE_SOURCE:-https://nuget.pkg.github.com/${GITHUB_REPOSITORY_OWNER:-lancer1977}/index.json}"
 PACKAGE_API_KEY="${PACKAGE_API_KEY:-${GHCR_TOKEN:-${GITHUB_PACKAGES_TOKEN:-${GITHUB_TOKEN:-${GH_TOKEN:-}}}}}"
+PUBLISH_NUGET_ORG="${PUBLISH_NUGET_ORG:-false}"
+NUGET_ORG_SOURCE="${NUGET_ORG_SOURCE:-https://api.nuget.org/v3/index.json}"
+NUGET_ORG_API_KEY="${NUGET_ORG_API_KEY:-${NUGET_API_KEY:-}}"
 DRY_RUN="${DRY_RUN:-false}"
 
 show_help() {
@@ -24,9 +22,11 @@ Builds, tests, and packs the API.IMVDB solution.
 Environment:
   PACKAGE_DIR                Output directory for .nupkg files.
   PUBLISH_GITHUB_PACKAGES    Set to true to push packages to GitHub Packages.
-  PACKAGE_API_KEY            API key for package push.
+  PACKAGE_API_KEY            API key for GitHub Packages push.
   GHCR_TOKEN / GITHUB_PACKAGES_TOKEN / GITHUB_TOKEN / GH_TOKEN
                              Fallback token for package push.
+  PUBLISH_NUGET_ORG          Set to true to push packages to nuget.org.
+  NUGET_ORG_API_KEY         API key for nuget.org push.
   DRY_RUN                    Set to true to skip push steps.
 EOF
 }
@@ -57,15 +57,35 @@ if [[ "$PUBLISH_GITHUB_PACKAGES" == "true" || "$PUBLISH_GITHUB_PACKAGES" == "1" 
   if [[ "$DRY_RUN" == "true" || "$DRY_RUN" == "1" ]]; then
     echo "DRY_RUN: dotnet nuget push \"$PACKAGE_DIR\"/*.nupkg --source \"$PACKAGE_SOURCE\" --api-key *** --skip-duplicate"
   else
-  if [[ -z "$PACKAGE_API_KEY" ]]; then
-    echo "PUBLISH_GITHUB_PACKAGES is enabled, but PACKAGE_API_KEY/GITHUB_TOKEN/GH_TOKEN is not set." >&2
-    exit 1
-  fi
+    if [[ -z "$PACKAGE_API_KEY" ]]; then
+      echo "PUBLISH_GITHUB_PACKAGES is enabled, but PACKAGE_API_KEY/GITHUB_TOKEN/GH_TOKEN is not set." >&2
+      exit 1
+    fi
 
-  dotnet nuget push "$PACKAGE_DIR"/*.nupkg \
-    --source "$PACKAGE_SOURCE" \
-    --api-key "$PACKAGE_API_KEY" \
-    --skip-duplicate
+    for package in "$PACKAGE_DIR"/*.nupkg; do
+      dotnet nuget push "$package" \
+        --source "$PACKAGE_SOURCE" \
+        --api-key "$PACKAGE_API_KEY" \
+        --skip-duplicate
+    done
+  fi
+fi
+
+if [[ "$PUBLISH_NUGET_ORG" == "true" || "$PUBLISH_NUGET_ORG" == "1" ]]; then
+  if [[ "$DRY_RUN" == "true" || "$DRY_RUN" == "1" ]]; then
+    echo "DRY_RUN: dotnet nuget push \"$PACKAGE_DIR\"/*.nupkg --source \"$NUGET_ORG_SOURCE\" --api-key *** --skip-duplicate"
+  else
+    if [[ -z "$NUGET_ORG_API_KEY" ]]; then
+      echo "PUBLISH_NUGET_ORG is enabled, but NUGET_ORG_API_KEY/NUGET_API_KEY is not set." >&2
+      exit 1
+    fi
+
+    for package in "$PACKAGE_DIR"/*.nupkg; do
+      dotnet nuget push "$package" \
+        --source "$NUGET_ORG_SOURCE" \
+        --api-key "$NUGET_ORG_API_KEY" \
+        --skip-duplicate
+    done
   fi
 fi
 
