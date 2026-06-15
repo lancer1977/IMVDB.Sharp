@@ -17,6 +17,11 @@
 
     <ItemGroup>
         <PackageReference Include="PolyhydraGames.Core.RestfulService" Version="1.0.0.52"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../Core.Interfaces/Interfaces/PolyhydraGames.Core.Interfaces.csproj" />
     </ItemGroup>
 
     <ItemGroup>
