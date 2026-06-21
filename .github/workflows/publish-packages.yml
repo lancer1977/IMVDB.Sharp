@@ -2,7 +2,8 @@ name: publish-packages
 
 on:
   push:
-    branches: ["main"]
+    tags:
+      - 'v*'
   workflow_dispatch:
     inputs:
       publish_nuget_org:
@@ -36,7 +37,9 @@ jobs:
         run: dotnet test PolyhydraGames.IMVDB.Test.sln --configuration Release --no-restore --no-build --verbosity normal
 
       - name: Pack
-        run: dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore --output ./artifacts/package
+        env:
+          PACKAGE_VERSION: ${{ github.ref_name }}
+        run: dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore -p:PackageVersion=${PACKAGE_VERSION#v} --output ./artifacts/package
 
       - name: Publish to GitHub Packages
         run: |
