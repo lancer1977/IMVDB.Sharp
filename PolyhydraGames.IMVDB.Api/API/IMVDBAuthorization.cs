@@ -2,7 +2,7 @@
 {
     public class IMVDBAuthorization : IIMVDBAuthorization
     {
-        public string APIKey { get; set; }
+        public string APIKey { get; set; } = string.Empty;
 
         public string GetIncludes()
         {

@@ -40,7 +40,7 @@ namespace PolyhydraGames.IMVDB.API
         protected async Task<HttpRequestMessage> GetHttpRequestMessage(
             string method,
             HttpMethod httpMethod,
-            HttpContent content = null)
+            HttpContent? content = null)
         {
             var request = new HttpRequestMessage
             {

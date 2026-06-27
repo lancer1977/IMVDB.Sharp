@@ -41,15 +41,7 @@ esac
 mkdir -p "$PACKAGE_DIR"
 
 cd "$WORKSPACE_DIR"
-dotnet restore PolyhydraGames.IMVDB.Test.sln
-dotnet build PolyhydraGames.IMVDB.Test.sln --configuration "$CONFIGURATION" --no-restore
-dotnet test PolyhydraGames.IMVDB.Test.sln --configuration "$CONFIGURATION" --no-restore --no-build --verbosity normal
-
-rm -f "$PACKAGE_DIR"/*.nupkg 2>/dev/null || true
-dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj \
-  --configuration "$CONFIGURATION" \
-  --no-restore \
-  --output "$PACKAGE_DIR"
+CONFIGURATION="$CONFIGURATION" PACKAGE_DIR="$PACKAGE_DIR" "$ROOT_DIR/scripts/validate.sh"
 
 echo "Packed API.IMVDB artifacts to $PACKAGE_DIR"
 
