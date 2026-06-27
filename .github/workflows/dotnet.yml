@@ -19,17 +19,8 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
-      - name: Restore
-        run: dotnet restore PolyhydraGames.IMVDB.Test.sln
-
-      - name: Build
-        run: dotnet build PolyhydraGames.IMVDB.Test.sln --no-restore
-
-      - name: Test
-        run: dotnet test PolyhydraGames.IMVDB.Test.sln --no-restore --no-build --verbosity normal
-
-      - name: Pack
-        run: dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore --output ./artifacts/package
+      - name: Validate
+        run: ./scripts/validate.sh
 
       - name: Upload package artifact
         uses: actions/upload-artifact@v4
