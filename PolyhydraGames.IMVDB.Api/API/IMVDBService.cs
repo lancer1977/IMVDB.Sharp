@@ -75,19 +75,10 @@ namespace PolyhydraGames.IMVDB.API
                     return HttpResponse.Create("", obj);
                 }
 
-                if (response.StatusCode == HttpStatusCode.Unauthorized)
-                {
-                    return HttpResponse.CreateError<T>(
-                        IMVDBErrorKind.Unauthorized,
-                        response.StatusCode,
-                        "Not authorized",
-                        endUrl);
-                }
-
                 return HttpResponse.CreateError<T>(
-                    IMVDBErrorKind.HttpError,
+                    MapErrorKind(response.StatusCode),
                     response.StatusCode,
-                    response.StatusCode + ":" + response.ReasonPhrase,
+                    BuildHttpErrorMessage(response),
                     endUrl);
             }
             catch (Exception ex)
@@ -135,6 +126,31 @@ namespace PolyhydraGames.IMVDB.API
             var encoded = System.Uri.EscapeDataString(value).Replace("%20", "+");
             return $"search/{endpointType}?q={encoded}&per_page={perPage}&page={page}".Trim();
         }
+
+        private static IMVDBErrorKind MapErrorKind(HttpStatusCode statusCode)
+            => statusCode switch
+            {
+                HttpStatusCode.Unauthorized => IMVDBErrorKind.Unauthorized,
+                HttpStatusCode.NotFound => IMVDBErrorKind.NotFound,
+                HttpStatusCode.TooManyRequests => IMVDBErrorKind.RateLimited,
+                HttpStatusCode.ServiceUnavailable => IMVDBErrorKind.TransientFailure,
+                HttpStatusCode.BadGateway => IMVDBErrorKind.TransientFailure,
+                HttpStatusCode.GatewayTimeout => IMVDBErrorKind.TransientFailure,
+                _ when (int)statusCode >= 500 => IMVDBErrorKind.ServerError,
+                _ => IMVDBErrorKind.HttpError
+            };
+
+        private static string BuildHttpErrorMessage(HttpResponseMessage response)
+            => response.StatusCode switch
+            {
+                HttpStatusCode.Unauthorized => "Not authorized",
+                HttpStatusCode.NotFound => "Not found",
+                HttpStatusCode.TooManyRequests => "Rate limited",
+                HttpStatusCode.ServiceUnavailable => "Service unavailable",
+                HttpStatusCode.BadGateway => "Bad gateway",
+                HttpStatusCode.GatewayTimeout => "Gateway timeout",
+                _ => response.StatusCode + ":" + response.ReasonPhrase
+            };
     }
 
     public enum IMVDBErrorKind
@@ -142,7 +158,11 @@ namespace PolyhydraGames.IMVDB.API
         None = 0,
         Unauthorized = 1,
         HttpError = 2,
-        Exception = 3
+        Exception = 3,
+        NotFound = 4,
+        RateLimited = 5,
+        TransientFailure = 6,
+        ServerError = 7
     }
 
     public record IMVDBError(IMVDBErrorKind Kind, HttpStatusCode? StatusCode, string Message, string? Endpoint = null);

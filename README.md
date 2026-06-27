@@ -78,6 +78,9 @@ if (!result.Success && result.Error is not null)
 }
 ```
 
+Stable error kinds include `Unauthorized`, `NotFound`, `RateLimited`,
+`TransientFailure`, `ServerError`, `HttpError`, and `Exception`.
+
 ## Roadmap
 - [x] Add fixture-backed deserialization tests.
 - [x] Keep live IMVDB tests explicit.
