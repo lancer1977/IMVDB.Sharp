@@ -1,0 +1,55 @@
+name: publish-packages
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      publish_nuget_org:
+        description: "Also push the packed nupkgs to nuget.org"
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore PolyhydraGames.IMVDB.Test.sln
+
+      - name: Build
+        run: dotnet build PolyhydraGames.IMVDB.Test.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test PolyhydraGames.IMVDB.Test.sln --configuration Release --no-restore --no-build --verbosity normal
+
+      - name: Pack
+        env:
+          PACKAGE_VERSION: ${{ github.ref_name }}
+        run: dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore -p:PackageVersion=${PACKAGE_VERSION#v} --output ./artifacts/package
+
+      - name: Publish to GitHub Packages
+        run: |
+          for package in ./artifacts/package/*.nupkg; do
+            dotnet nuget push "$package" --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}" --skip-duplicate
+          done
+
+      - name: Publish to nuget.org
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_nuget_org == 'true' }}
+        run: |
+          for package in ./artifacts/package/*.nupkg; do
+            dotnet nuget push "$package" --source "https://api.nuget.org/v3/index.json" --api-key "${{ secrets.NUGET_API_KEY }}" --skip-duplicate
+          done

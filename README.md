@@ -44,6 +44,10 @@ var httpService = new MyHttpService();
 var imvdbService = new IMVDBService(logger, authService, httpService);
 ```
 
+`authService` must provide `IIMVDBAuthorization.APIKey`, and `httpService`
+must provide an `HttpClient` through `IHttpService.GetClient`. In application
+code these are normally registered through dependency injection.
+
 ### Fetch Video Information
 ```csharp
 var videoResponse = await imvdbService.GetVideoResponse("VIDEO_ID");
@@ -65,31 +69,53 @@ if (searchResults.Success)
 }
 ```
 
+### Typed Error Handling
+```csharp
+var result = await imvdbService.GetVideoResponse("VIDEO_ID");
+if (!result.Success && result.Error is not null)
+{
+    Console.WriteLine($"{result.Error.Kind}: {result.Error.Message}");
+}
+```
+
+Stable error kinds include `Unauthorized`, `NotFound`, `RateLimited`,
+`TransientFailure`, `ServerError`, `HttpError`, and `Exception`.
+
 ## Roadmap
 - [x] Add fixture-backed deserialization tests.
 - [x] Keep live IMVDB tests explicit.
 - [x] Add CI build/test/pack workflow.
 - [x] Pack README and LICENSE into NuGet package.
 - [x] Expand API coverage to include all IMVDB endpoints.
-- [ ] Improve typed error handling and logging.
-- [ ] Provide sample projects for easier adoption.
+- [x] Improve typed error handling and logging.
+- [x] Provide sample usage docs for easier adoption.
 
 ## Testing
 
 Default tests use embedded fixture JSON and should not require live IMVDB access.
 
 ```bash
-dotnet test PolyhydraGames.IMVDB.Test.sln --no-restore
+./scripts/validate.sh
 ```
 
 Live tests are marked explicit because they require IMVDB credentials, Redis,
 and live API access.
 
+```bash
+export IMVDB__APIKey="..."
+export IMVDB__RedisConnection="localhost:6379"
+./scripts/live-smoke.sh
+```
+
+Expected success is four explicit live test cases passing: video detail, video
+search, entity search, and entity detail. Missing env vars fail before test
+startup with a list of missing names. Invalid credentials should fail as a typed
+IMVDB authorization or HTTP error.
+
 ## Build And Pack
 
 ```bash
-dotnet build PolyhydraGames.IMVDB.Test.sln --no-restore
-dotnet pack PolyhydraGames.IMVDB.Api/PolyhydraGames.IMVDB.csproj --configuration Release --no-restore
+./scripts/validate.sh
 ```
 
 ## Publishing
@@ -101,9 +127,20 @@ Use the repo helper for the standard test/build/pack flow:
 ```
 
 - Packs `PolyhydraGames.IMVDB` into `./artifacts/package`
-- Set `PUBLISH_GITHUB_PACKAGES=true` to push packages with `PACKAGE_API_KEY`, `GHCR_TOKEN`, `GITHUB_PACKAGES_TOKEN`, `GITHUB_TOKEN`, or `GH_TOKEN`
-- Optional local secrets are loaded from `~/.config/secrets/ghcr.env` and `~/.config/secrets/polyhydra.env`
+- Publishes to GitHub Packages by default, using `PACKAGE_API_KEY`, `GHCR_TOKEN`, `GITHUB_PACKAGES_TOKEN`, `GITHUB_TOKEN`, or `GH_TOKEN`
+- Set `PUBLISH_NUGET_ORG=true` only when the package should also go to nuget.org
 - Set `DRY_RUN=true` to skip the package push step
+
+For private/internal consumption from GitHub Packages, add the GitHub NuGet
+source for this organization and authenticate with a GitHub token or PAT:
+
+```bash
+dotnet nuget add source https://nuget.pkg.github.com/lancer1977/index.json \
+  --name lancer1977 \
+  --username YOUR_GITHUB_USERNAME \
+  --password YOUR_GITHUB_TOKEN \
+  --store-password-in-clear-text
+```
 
 ## Contributing
 Contributions are welcome! Feel free to submit issues or pull requests on GitHub.

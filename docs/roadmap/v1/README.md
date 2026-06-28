@@ -21,9 +21,9 @@ video endpoints.
 - [x] Add CI build/test/pack workflow.
 - [x] Add typed error modeling.
 - [x] Add fixture-backed URL construction tests.
-- [ ] Add sample application docs.
+- [x] Add sample usage docs.
 
 ## Known Gaps
 
-- [x] Live tests remain gated by IMVDB credentials and Redis.
+- [x] Live tests remain gated by IMVDB credentials and Redis, with `scripts/live-smoke.sh` documenting the credentialed smoke path.
 - [x] Endpoint coverage audit is still needed. See [`IMVDB.Sharp #1`](https://github.com/lancer1977/IMVDB.Sharp/issues/1).

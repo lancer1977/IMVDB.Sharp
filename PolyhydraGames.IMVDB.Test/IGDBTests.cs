@@ -29,6 +29,7 @@ namespace PolyhydraGames.IMVDB.Tests
             var config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", false, true)
                 .AddUserSecrets("65a2f916-1765-44e8-8d59-2d2ddcd7cc9b") // Use the UserSecretsId generated earlier
+                .AddEnvironmentVariables()
                 .Build();
 
 
@@ -37,7 +38,16 @@ namespace PolyhydraGames.IMVDB.Tests
                 services.AddSingleton<IConfiguration>(config);
                 services.AddSingleton(_ => httpMock.Object);
                 services.AddSingleton<IMVDBService>();
-                services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("192.168.0.21"));
+                services.AddSingleton<IConnectionMultiplexer>(_ =>
+                {
+                    var redisConnection = config["IMVDB:RedisConnection"];
+                    if (string.IsNullOrWhiteSpace(redisConnection))
+                    {
+                        throw new InvalidOperationException("IMVDB Redis connection is not configured.");
+                    }
+
+                    return ConnectionMultiplexer.Connect(redisConnection);
+                });
                 services.AddSingleton<IIMVDBAuthorization>(x =>
                 {
                     var config = x.GetRequiredService<IConfiguration>();
